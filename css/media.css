@@ -216,6 +216,11 @@
         justify-content: space-between;
         margin-bottom: 5px;
     }
+    .mega-open-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .nav-li .lang-name::after,
     .nav-li .config-name::after,
     .nav-li .mega-big-link::after {
@@ -224,14 +229,26 @@
         font-weight: 600;
         font-style: normal;
         text-decoration: inherit;
-        margin-left: 10px;
+        margin-right: 0;
+        margin-top: -3px;
+    }
+    .mega-list1 .mega-open-list::after {
+        content: "\f0dd";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        font-style: normal;
+        text-decoration: inherit;
+        margin-right: 10px;
         margin-top: -3px;
     }
     html[dir=rtl] .nav-li .lang-name::after,
     html[dir=rtl] .nav-li .config-name::after,
     html[dir=rtl] .nav-li .mega-big-link::after {
-        margin-right: 0;
+        margin-left: 0;
+    }
+    html[dir=rtl] .mega-list1 .mega-open-list::after {
         margin-left: 10px;
+        margin-top: -3px;
     }
     /*** language & Config Menu Start ***/
     .nav .lang-list,
@@ -261,7 +278,7 @@
     .nav .config-list-li .config-link {
         color: #58595b;
         font-family: "medium";
-        font-size: 14px;
+        font-size: 15px;
         transition: all 0.4s ease-in-out;
     }
     .nav .lang-list-li .lang-list-link:hover,
@@ -299,6 +316,9 @@
         margin-left: 0;
         margin-right: 10px;
     }
+    .megamenu .mega2-box {
+        display: none;
+    }
     .nav .mega-img-box {
         display: none;
     }
@@ -306,11 +326,17 @@
     .mega-list2 .mega-li2 {
         padding: 3px 0;
     }
-    .mega-list1 .mega-li1::before,
     .mega-list2 .mega-li2::before {
         content: "- ";
     }
-    .mega-li1 .mega-link1,
+    .mega-list2 .mega-li2:last-child {
+        padding-bottom: 0;
+    }
+    .mega-li1 .mega-link1 {
+        color: #58595b;
+        font-family: "medium";
+        font-size: 15px;
+    }
     .mega-li2 .mega-link2 {
         color: #58595b;
         font-family: "medium";
@@ -851,6 +877,11 @@
         justify-content: space-between;
         margin-bottom: 5px;
     }
+    .mega-open-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .nav-li .lang-name::after,
     .nav-li .config-name::after,
     .nav-li .mega-big-link::after {
@@ -859,14 +890,26 @@
         font-weight: 600;
         font-style: normal;
         text-decoration: inherit;
-        margin-left: 10px;
+        margin-right: 0;
+        margin-top: -3px;
+    }
+    .mega-list1 .mega-open-list::after {
+        content: "\f0dd";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        font-style: normal;
+        text-decoration: inherit;
+        margin-right: 10px;
         margin-top: -3px;
     }
     html[dir=rtl] .nav-li .lang-name::after,
     html[dir=rtl] .nav-li .config-name::after,
     html[dir=rtl] .nav-li .mega-big-link::after {
-        margin-right: 0;
+        margin-left: 0;
+    }
+    html[dir=rtl] .mega-list1 .mega-open-list::after {
         margin-left: 10px;
+        margin-top: -3px;
     }
     /*** language & Config Menu Start ***/
     .nav .lang-list,
@@ -896,7 +939,7 @@
     .nav .config-list-li .config-link {
         color: #58595b;
         font-family: "medium";
-        font-size: 14px;
+        font-size: 15px;
         transition: all 0.4s ease-in-out;
     }
     .nav .lang-list-li .lang-list-link:hover,
@@ -934,6 +977,9 @@
         margin-left: 0;
         margin-right: 10px;
     }
+    .megamenu .mega2-box {
+        display: none;
+    }
     .nav .mega-img-box {
         display: none;
     }
@@ -941,11 +987,17 @@
     .mega-list2 .mega-li2 {
         padding: 3px 0;
     }
-    .mega-list1 .mega-li1::before,
     .mega-list2 .mega-li2::before {
         content: "- ";
     }
-    .mega-li1 .mega-link1,
+    .mega-list2 .mega-li2:last-child {
+        padding-bottom: 0;
+    }
+    .mega-li1 .mega-link1 {
+        color: #58595b;
+        font-family: "medium";
+        font-size: 15px;
+    }
     .mega-li2 .mega-link2 {
         color: #58595b;
         font-family: "medium";

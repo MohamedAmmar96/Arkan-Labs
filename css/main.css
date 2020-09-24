@@ -530,6 +530,24 @@ html[dir=rtl] .megamenu {
     right: 0;
 }
 
+.megamenu .mega2-box {
+    position: absolute;
+    top: 30px;
+    left: 32%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+html[dir=rtl] .megamenu .mega2-box {
+    left: auto;
+    right: 30%;
+}
+
 .megamenu .mega-list1 {
     margin-left: 10px;
 }
@@ -544,9 +562,21 @@ html[dir=rtl] .megamenu .mega-list2 {
     text-align: right;
 }
 
-.megamenu .mega-list1,
-.megamenu .mega-list2 {
+.megamenu .mega-list1 .small {
+    display: none;
+}
+
+.megamenu .mega-list1 {
     margin-top: 10px;
+}
+
+.megamenu .mega-list2 {
+    margin-top: 15px;
+}
+
+.megamenu .mega-list1 .mega-hidden-menu:hover .mega2-box {
+    visibility: visible;
+    opacity: 1;
 }
 
 .mega-list1 .mega-li1,
@@ -566,7 +596,7 @@ html[dir=rtl] .megamenu .mega-list2 {
     font-size: 18px;
 }
 
-.mega-li2 .mega-link {
+.mega-li2 .mega-link2 {
     font-family: "regular";
     font-size: 18px;
 }
@@ -752,9 +782,10 @@ html[dir=rtl] .cats-box .cat:last-child {
     width: 100%;
 }
 
-.cats-box .cat:hover {
+
+/* .cats-box .cat:hover {
     transform: scale(0.97);
-}
+} */
 
 .cats-box .cat .cat-name-box {
     position: absolute;
@@ -768,6 +799,20 @@ html[dir=rtl] .cats-box .cat:last-child {
     justify-content: flex-start;
     align-items: center;
     padding: 0 30px;
+    transition: all 0.4s ease-in-out;
+}
+
+.cats-box .cat .cat-name-box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ca232d;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out;
 }
 
 html[dir=rtl] .cat .cat-name-box {
@@ -779,16 +824,29 @@ html[dir=rtl] .cat .cat-name-box {
     margin-bottom: 0;
     font-family: "medium";
     font-size: 24px;
+    transition: all 0.4s ease-in-out;
 }
 
 html[dir=rtl] .cat-name-box .cat-name {
     font-size: 21px;
 }
 
+.cats-box .cat:hover .cat-name-box {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.cats-box .cat:hover .cat-name-box::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.cats-box .cat:hover .cat-name {
+    color: #ca232d;
+}
+
 .cats .big-offer {
     width: 100%;
     margin-bottom: 30px;
-    border: 1px solid #ca232d;
     transition: all 0.4s ease-in-out;
 }
 
@@ -929,11 +987,11 @@ html[dir=rtl] .item {
 }
 
 .item-content .item-name {
-    color: #58595b;
+    color: #212121;
     text-decoration: none;
     font-family: "regular";
     font-size: 16px;
-    height: 40px;
+    height: 50px;
     display: block;
     transition: all 0.4s ease-in-out;
 }
@@ -1005,7 +1063,7 @@ html[dir=rtl] .item-content .add-to-cart {
     background-color: transparent;
     color: #e5e5e5;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     transition: all 0.4s ease-in-out;
 }
 
@@ -1018,14 +1076,14 @@ html[dir=rtl] .item-content .add-to-cart {
     position: absolute;
     top: 35%;
     /* transform: translateY(-50%); */
-    right: -50px;
+    right: -40px;
 }
 
 .new-arrivals .owl-carousel .owl-nav .owl-next {
     position: absolute;
     top: 35%;
     /* transform: translateY(-50%); */
-    left: -50px;
+    left: -40px;
 }
 
 .new-arrivals .owl-carousel .owl-dots {
@@ -1253,7 +1311,7 @@ html[dir=rtl] .client .client-box::after {
     background-color: transparent;
     color: #e5e5e5;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     transition: all 0.4s ease-in-out;
 }
 
@@ -1264,16 +1322,16 @@ html[dir=rtl] .client .client-box::after {
 
 .testimonials .owl-carousel .owl-nav .owl-prev {
     position: absolute;
-    top: 35%;
-    /* transform: translateY(-50%); */
-    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -40px;
 }
 
 .testimonials .owl-carousel .owl-nav .owl-next {
     position: absolute;
-    top: 35%;
-    /* transform: translateY(-50%); */
-    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -40px;
 }
 
 .testimonials .owl-carousel .owl-dots {

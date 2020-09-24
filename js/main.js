@@ -274,7 +274,10 @@ $(document).ready(function() {
         $(".nav .megamenu").slideToggle(300);
     });
 
-
+    $(".nav .mega-open-list").click(function() {
+        $(".nav .mega-open-list").toggleClass("rotate");
+        $(".nav .megamenu .small").slideToggle(300);
+    });
 
     $(".first .footer-heading").click(function() {
         var x = $(".first .slide-list")
