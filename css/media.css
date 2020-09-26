@@ -2,7 +2,7 @@
 
 @media (max-width:767px) {
     .header {
-        padding: 20px 0;
+        padding: 10px 0;
         margin-bottom: 0;
     }
     .page-controls {
@@ -11,16 +11,20 @@
     .header-content .header-icon-list {
         display: none;
     }
+    .logo {
+        width: 50%;
+    }
+    .logo .logo-img {
+        max-width: 100%;
+    }
     .header .terms {
         margin-right: 0;
         margin-left: auto;
+        height: 75px;
     }
     html[dir=rtl] .header .terms {
         margin-right: auto;
         margin-left: 0;
-    }
-    .terms {
-        margin-top: 5px;
     }
     .terms .menu,
     .terms .search {
@@ -447,7 +451,7 @@
         margin-bottom: 100px;
     }
     .new-arrivals .new-arrivals-title {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
     .brands {
         background-color: #fafaf8;
@@ -455,7 +459,7 @@
         margin-bottom: 30px;
     }
     .brands .brands-title {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
     .brands-box .brand {
         width: 100%;
@@ -587,6 +591,15 @@
 /**************** Extra Small Screens From 0 to 500px ****************/
 
 @media (max-width:500px) {
+    .logo {
+        width: 70%;
+    }
+    .logo .logo-img {
+        max-width: 100%;
+    }
+    .header .terms {
+        height: 65px;
+    }
     .terms .menu,
     .terms .search {
         margin-right: 25px;
